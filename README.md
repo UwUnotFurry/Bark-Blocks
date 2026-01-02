@@ -1,4 +1,3 @@
-[logo]: src/main/resources/assets/bark-blocks/icon.png
 # <img src="src/main/resources/assets/bark-blocks/icon.png" width="30" /> Bark Blocks
 
 ## Features
