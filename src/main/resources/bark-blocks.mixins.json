@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "uwunotfurry.bark_blocks.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"AxeItemMixin"
+	],
+	"mixinextras" : {
+		"minVersion" : "0.5.0"
+	},
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

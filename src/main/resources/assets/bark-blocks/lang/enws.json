@@ -1,0 +1,13 @@
+{
+	"block.bark-blocks.oak_bark" : "Hollowed Oaken Log",
+	"block.bark-blocks.spruce_bark" : "Hollowed Pine Log",
+	"block.bark-blocks.birch_bark" : "Hollowed Birchen Log",
+	"block.bark-blocks.jungle_bark" : "Hollowed Exotic Log",
+	"block.bark-blocks.acacia_bark" : "Hollowed Beechen Log",
+	"block.bark-blocks.dark_oak_bark" : "Hollowed Ebon Log",
+	"block.bark-blocks.mangrove_bark" : "Hollowed Marsh Log",
+	"block.bark-blocks.cherry_bark" : "Hollowed Cherry Log",
+	"block.bark-blocks.pale_oak_bark" : "Hollowed Palor Log",
+	"block.bark-blocks.crimson_annulus" : "Hollowed Crimson Stem",
+	"block.bark-blocks.warped_annulus" : "Hollowed Warp'd Stem"
+}

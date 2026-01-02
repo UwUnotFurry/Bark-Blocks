@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "bark-blocks",
+	"version": "${version}",
+	"name": "Bark Blocks",
+	"description": "Ever wonder where the bark goes when you strip a log? Wonder no more!",
+	"authors": [
+		"UwUnotFurry"
+	],
+	"contact": {
+		"homepage" : "https://github.com/UwUnotFurry/Bark-Blocks",
+		"issues" : "https://github.com/UwUnotFurry/Bark-Blocks/issues",
+		"sources" : "https://github.com/UwUnotFurry/Bark-Blocks.git",
+		"please" : "don't"
+	},
+	"license": "CC-BY-NC-ND-4.0",
+	"icon": "assets/bark-blocks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"uwunotfurry.bark_blocks.BarkBlocks"
+		],
+		"fabric-datagen": [
+			"uwunotfurry.bark_blocks.datagen.BarkBlocksDataGenerator"
+		]
+	},
+	"mixins": [
+		"bark-blocks.mixins.json"
+	],
+	"accessWidener" : "bark-blocks.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.18.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+	}
+}
