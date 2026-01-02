@@ -4,6 +4,7 @@ import java.util.function.Function;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -101,6 +102,18 @@ public class Blocks {
 		FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_BARK, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(CHERRY_BARK, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(PALE_OAK_BARK, 30, 60);
+
+		FuelRegistryEvents.BUILD.register((builder, context) -> {
+			builder.add(OAK_BARK,		150);
+			builder.add(SPRUCE_BARK,	150);
+			builder.add(BIRCH_BARK,		150);
+			builder.add(JUNGLE_BARK,	150);
+			builder.add(ACACIA_BARK,	150);
+			builder.add(DARK_OAK_BARK,	150);
+			builder.add(MANGROVE_BARK,	150);
+			builder.add(CHERRY_BARK,	150);
+			builder.add(PALE_OAK_BARK,	150);
+		});
 	}
 
 	private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
