@@ -46,11 +46,25 @@ To use this mod you'll need to have fabric installed, if you do not already plea
 
 ### Versioning
 
-This mod uses versioning that looks like semantic versioning but isn't exactly. The mod's version will look as follows <nobr>'\<major\>.\<minor\>.\<patch\>+\<minecraft version\>'</nobr> or <nobr>'\<major\>.\<minor\>.\<patch\>-\<prerelease\>+\<minecraft version\>'</nobr>.
+As with most minecraft mods, semantic versioning isn't well suited.
+Minecraft in unusual in that older version are still played frequently, especially when modded.
+Thus it makes sense for modders to target a range of minecraft version as opposed to just the latest.
+So I'm going to throw in my two cents here.
 
-- \<major\> will be incremented when new features/content is added to the mod
-- \<minor\> will be incremented when changes are made to keep up with minecraft's updates
-- \<patch\> will be incremented when bugfixes are introduced inside the same minecraft version
+The version will look like ```<feature>.<update>.<patch>+<minecraft-version>```
+and pre-release versions will be indicated by adding ```-<pre-release>``` before the ```+```.
+
+- ```<feature>``` incremented when features are added/removed/replaced/et cetera
+- ```<update>``` incremented when ported to a new minecraft version - should mostly just be technical changes but may include some player facing changes if consequential of the new minecraft version
+- ```<patch>``` incremented when bugfixes are made
+- ```<minecraft-version>``` indicates the supported minecraft versions (changes with each ```<update>```), may indicate
+  - A single minecraft version
+  - A range of versions: ```<lower>-<upper>``` where ```<lower>``` is oldest minecraft version and ```<upper>``` is the newest
+  - All subsequent versions: ```<first>+``` where ```<first>``` is the first suported minecraft version
+    - Will need to be replaced with a range if a new minecraft update breaks compatibility
+- ```<pre-release>``` may be ```<stage>.<build-number>``` where
+  - ```<stage>``` is ```a``` for alpha, ```b``` for beta or ```rc``` for release candidate
+  - ```<build-number>``` is incremented for each build within the same ```<stage>```
 
 ### Other
 
