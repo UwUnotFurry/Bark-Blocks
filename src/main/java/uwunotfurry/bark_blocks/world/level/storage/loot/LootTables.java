@@ -13,6 +13,8 @@ public class LootTables {
 	public static final ResourceLocation STRIP_JUNGLE	= register("jungle");
 	public static final ResourceLocation STRIP_ACACIA	= register("acacia");
 	public static final ResourceLocation STRIP_DARK_OAK	= register("dark_oak");
+	public static final ResourceLocation STRIP_CRIMSON	= register("crimson");
+	public static final ResourceLocation STRIP_WARPED	= register("warped");
 
 	private static ResourceLocation register(String name) {
 		ResourceLocation location = new ResourceLocation(BarkBlocks.MOD_ID, "gameplay/strip/" + name);

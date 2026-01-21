@@ -49,6 +49,18 @@ public class Blocks {
 			net.minecraft.world.level.block.Blocks.DARK_OAK_LOG)
 		)
 	);
+	public static final Block CRIMSON_ANNULUS = register(
+		"crimson_annulus",
+		new HollowRotatedPillarBlock(Block.Properties.copy(
+			net.minecraft.world.level.block.Blocks.CRIMSON_STEM)
+		)
+	);
+	public static final Block WARPED_ANNULUS = register(
+		"warped_annulus",
+		new HollowRotatedPillarBlock(Block.Properties.copy(
+			net.minecraft.world.level.block.Blocks.WARPED_STEM)
+		)
+	);
 
 	public static void onInitialise() {
 		FlammableBlockRegistry.getDefaultInstance().add(OAK_BARK, 30, 60);

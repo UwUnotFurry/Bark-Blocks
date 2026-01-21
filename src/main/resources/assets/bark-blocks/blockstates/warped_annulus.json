@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "bark-blocks:block/warped_annulus",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "bark-blocks:block/warped_annulus"
+    },
+    "axis=z": {
+      "model": "bark-blocks:block/warped_annulus",
+      "x": 90
+    }
+  }
+}

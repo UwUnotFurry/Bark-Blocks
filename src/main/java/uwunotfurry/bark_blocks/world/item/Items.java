@@ -18,6 +18,8 @@ public class Items {
 	public static Item JUNGLE_BARK		= registerBlock(Blocks.JUNGLE_BARK);
 	public static Item ACACIA_BARK		= registerBlock(Blocks.ACACIA_BARK);
 	public static Item DARK_OAK_BARK	= registerBlock(Blocks.DARK_OAK_BARK);
+	public static Item CRIMSON_ANNULUS	= registerBlock(Blocks.CRIMSON_ANNULUS);
+	public static Item WARPED_ANNULUS	= registerBlock(Blocks.WARPED_ANNULUS);
 
 	public static void  onInitialise() {
 		FuelRegistry.INSTANCE.add(OAK_BARK,			150);
