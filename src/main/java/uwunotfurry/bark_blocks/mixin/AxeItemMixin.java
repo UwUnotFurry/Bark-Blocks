@@ -8,23 +8,18 @@ import com.llamalad7.mixinextras.sugar.Local;
 
 import java.util.Optional;
 
-import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -42,25 +37,23 @@ public class AxeItemMixin {
 		CallbackInfoReturnable __,
 		@Local UseOnContext context,
 		@Local Level level,
-		@Local BlockPos pos,
-		@Local Player player,
-		@Local ItemStack axe
+		@Local BlockPos pos
 	) {
 		BlockState state = level.getBlockState(pos);
 		Block block = state.getBlock();
 
 		if (AxeInteractLootMap.contains(block) && level instanceof ServerLevel) {
-			Block.dropFromBlockInteractLootTable(
-				(ServerLevel)level,
-				AxeInteractLootMap.get(block),
-				state,
-				null,
-				axe,
-				player,
-				(_level, stack) -> {
-					Block.popResourceFromFace(_level, pos, context.getClickedFace(), stack);
-				}
-			);
+			LootTable lootTable = ((ServerLevel)level).getServer().getLootTables().get(AxeInteractLootMap.get(block));
+			LootContext lootContext = (new LootContext.Builder((ServerLevel)level))
+				.withRandom(level.random)
+				.withParameter(LootContextParams.TOOL, context.getItemInHand())
+				.withParameter(LootContextParams.BLOCK_STATE, state)
+				.withParameter(LootContextParams.BLOCK_POS, pos)
+				.create(LootContextParamSets.BLOCK)
+			;
+			for (ItemStack items : lootTable.getRandomItems(lootContext)) {
+				Block.popResource(level, pos, items);
+			}
 		}
 	}
 }

@@ -4,10 +4,5 @@
 	"block.bark-blocks.birch_bark" : "Birch Rind",
 	"block.bark-blocks.jungle_bark" : "Rainwold Rind",
 	"block.bark-blocks.acacia_bark" : "Wattletree Rind",
-	"block.bark-blocks.dark_oak_bark" : "Dark Oak Rind",
-	"block.bark-blocks.mangrove_bark" : "Liftmore Rind",
-	"block.bark-blocks.cherry_bark" : "Stoneberry Rind",
-	"block.bark-blocks.pale_oak_bark" : "Bloak Oak Rind",
-	"block.bark-blocks.crimson_annulus" : "Fellred Hilling",
-	"block.bark-blocks.warped_annulus" : "Warped Hilling"
+	"block.bark-blocks.dark_oak_bark" : "Dark Oak Rind"
 }

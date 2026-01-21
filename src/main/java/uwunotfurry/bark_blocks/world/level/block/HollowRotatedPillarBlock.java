@@ -1,15 +1,12 @@
 package uwunotfurry.bark_blocks.world.level.block;
 
-import com.mojang.math.OctahedralGroup;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -26,10 +23,10 @@ public class HollowRotatedPillarBlock extends RotatedPillarBlock implements Simp
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public static final VoxelShape SHAPE_X = Shapes.join(Shapes.block(), Shapes.box(0f, 0.125f, 0.125f, 1f, 0.875f, 0.875f), BooleanOp.ONLY_FIRST);
-	public static final VoxelShape SHAPE_Y = Shapes.rotate(SHAPE_X, OctahedralGroup.ROT_90_Z_POS);
-	public static final VoxelShape SHAPE_Z = Shapes.rotate(SHAPE_X, OctahedralGroup.ROT_90_Y_POS);
+	public static final VoxelShape SHAPE_Y = Shapes.join(Shapes.block(), Shapes.box(0.125f, 0f, 0.125f, 0.875f, 1f, 0.875f), BooleanOp.ONLY_FIRST);
+	public static final VoxelShape SHAPE_Z = Shapes.join(Shapes.block(), Shapes.box(0.125f, 0.125f, 0f, 0.875f, 0.875f, 1f), BooleanOp.ONLY_FIRST);
 
-	public HollowRotatedPillarBlock(BlockBehaviour.Properties properties) {
+	public HollowRotatedPillarBlock(Block.Properties properties) {
 		super(properties);
 		registerDefaultState(
 			defaultBlockState()
@@ -44,7 +41,7 @@ public class HollowRotatedPillarBlock extends RotatedPillarBlock implements Simp
 	}
 
 	@Override
-	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		switch((Direction.Axis)state.getValue(AXIS)) {
 			case X:
 				return SHAPE_X;
@@ -59,7 +56,7 @@ public class HollowRotatedPillarBlock extends RotatedPillarBlock implements Simp
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		return super.getStateForPlacement(context)
-			.setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).is(Fluids.WATER))
+			.setValue(WATERLOGGED, context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER)
 		;
 	}
 

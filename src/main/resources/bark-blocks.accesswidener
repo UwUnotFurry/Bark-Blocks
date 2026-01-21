@@ -1,5 +1,1 @@
 classTweaker v1 named
-
-accessible method net/minecraft/world/level/block/Block dropFromBlockInteractLootTable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Ljava/util/function/BiConsumer;)Z
-extendable method net/minecraft/world/level/levelgen/feature/FallenTreeFeature placeStump (Lnet/minecraft/world/level/levelgen/feature/configurations/FallenTreeConfiguration;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos$MutableBlockPos;)V
-accessible method net/minecraft/data/worldgen/features/TreeFeatures createFallenTrees (Lnet/minecraft/world/level/block/Block;II)Lnet/minecraft/world/level/levelgen/feature/configurations/FallenTreeConfiguration$FallenTreeConfigurationBuilder;

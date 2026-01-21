@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "bark-blocks:block/spruce_bark",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "bark-blocks:block/spruce_bark"
+    },
+    "axis=z": {
+      "model": "bark-blocks:block/spruce_bark",
+      "x": 90
+    }
+  }
+}

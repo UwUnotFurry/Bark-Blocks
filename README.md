@@ -4,43 +4,23 @@
 
 ### Blocks
 
-This mod adds several new blocks: a new bark block for each wood type - including the nether ones. More specifically,
-
-- Oak Bark
-- Spruce Bark
-- Birch Bark
-- Jungle Bark
-- Acacia Bark
-- Dark Oak Bark
-- Mangrove Bark
-- Cherry Bark
-- Pale Oak Bark
-- Crimson Annulus
-- Warped Annulus
-
-These blocks are hollow through one axis: a two pixel wide ring showing the log textures outside and stripped texture inside. They're spacious enough to stand in (when verticle) or crawl through (when horizontal). They are also waterloggable.
-
-### Obtaining
-
-Bark blocks are obtained by stripping the associated log or wood block, this requires an axe with silk touch - finally giving silk touch a reasonable use for axes.
-
-### World gen
-
-Recently, minecraft introduced fallen trees as a feature that can generate in some biomes. With this mod, these fallen trees have a 1/5 chance to be replaced with a hollow version composed of bark blocks instead.
+This mod adds bark blocks, a new type of wooden block. When you strip a log with silk touch, you now get a bark block of the corresponding wood type. Bark blocks are hollow through one axis, leaving only a two-pixel-thick ring. As they are hollow, you can stand or crawl inside them and they can also be waterlogged.
 
 ## Setup
 
 ### Compiling (Optional)
 
-Compiled jar files are available under releases, if you intend to use these then you can ignore this. I suggest ignoring this unless you are familiar with mod development or otherwise understand what you are doing.
+Compiled jar files are available under releases - if you intend to use these then you can ignore this. I suggest using them unless you are familiar with mod development or otherwise understand what you are doing.
 
-Fabric mods use gradle to manage the project, this may be able to be done from your IDE, elsewise from your terminal of choice. Using an IDE may require [setup](https://docs.fabricmc.net/develop/getting-started/setting-up). In any case, you'll need to run the runDatagen task then the build task. The output jar should be located as <nobr>'build/libs/bark-blocks-\<version\>.jar'</nobr>.
+Your IDE of choice may be able to be used for this; otherwise, your terminal of choice. Using an IDE requires [setup](https://docs.fabricmc.net/develop/getting-started/setting-up). In any case, run the build task. The output jar should be located as <nobr>'build/libs/bark-blocks-\<version\>.jar'</nobr>.
 
-Note: there may also be a jar file of similar name <nobr>'bark-blocks-\<version\>-sources.jar'</nobr> this can be ignored.
+<sub>Note: there may also be a jar file of similar name <nobr>'bark-blocks-\<version\>-sources.jar'</nobr>, which can be ignored.</sub>
 
 ### Installing
 
-To use this mod you'll need to have fabric installed, if you do not already please see [here](https://docs.fabricmc.net/players/installing-fabric/). As with any fabric mod, simply place the jar file into the mods folder - note that this mod depends on Fabric API. See [here](https://docs.fabricmc.net/players/installing-mods) if you need help.
+This mod uses the fabric modloader. If you need help installing fabric, please see [here](https://docs.fabricmc.net/players/installing-fabric/). As with any fabric mod, simply place the jar file into the mods folder - See [here](https://docs.fabricmc.net/players/installing-mods) if you need help.
+
+<sub>Note: this mod depends on the fabric API, a separate mod released by fabric.</sub>
 
 ## See also
 
