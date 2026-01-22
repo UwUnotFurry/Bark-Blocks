@@ -1,0 +1,13 @@
+{
+	"replace": "false",
+	"values": [
+		"bark-blocks:oak_bark",
+		"bark-blocks:spruce_bark",
+		"bark-blocks:birch_bark",
+		"bark-blocks:jungle_bark",
+		"bark-blocks:acacia_bark",
+		"bark-blocks:dark_oak_bark",
+		"bark-blocks:crimson_annulus",
+		"bark-blocks:warped_annulus"
+	]
+}

@@ -53,7 +53,7 @@ public class AxeItemMixin {
 				.create(LootContextParamSets.BLOCK)
 			;
 			for (ItemStack items : lootTable.getRandomItems(lootContext)) {
-				Block.popResource(level, pos, items);
+				Block.popResourceFromFace(level, pos, context.getClickedFace(), items);
 			}
 		}
 	}
