@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseOnContext;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,6 +20,7 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.phys.Vec3;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -48,7 +49,7 @@ public class AxeItemMixin {
 				.withRandom(level.random)
 				.withParameter(LootContextParams.TOOL, context.getItemInHand())
 				.withParameter(LootContextParams.BLOCK_STATE, state)
-				.withParameter(LootContextParams.BLOCK_POS, pos)
+				.withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(pos))
 				.create(LootContextParamSets.BLOCK)
 			;
 			for (ItemStack items : lootTable.getRandomItems(lootContext)) {
