@@ -49,6 +49,12 @@ public class Blocks {
 			net.minecraft.world.level.block.Blocks.DARK_OAK_LOG)
 		)
 	);
+	public static final Block MANGROVE_BARK = register(
+		"mangrove_bark",
+		new HollowRotatedPillarBlock(Block.Properties.copy(
+			net.minecraft.world.level.block.Blocks.MANGROVE_LOG)
+		)
+	);
 	public static final Block CRIMSON_ANNULUS = register(
 		"crimson_annulus",
 		new HollowRotatedPillarBlock(Block.Properties.copy(
@@ -69,6 +75,7 @@ public class Blocks {
 		FlammableBlockRegistry.getDefaultInstance().add(JUNGLE_BARK, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(ACACIA_BARK, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(DARK_OAK_BARK, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_BARK, 30, 60);
 	}
 
 	private static Block register(String name, Block block) {

@@ -43,6 +43,9 @@ public class AxeInteractLootMap {
 		add(Blocks.DARK_OAK_LOG,  LootTables.STRIP_DARK_OAK);
 		add(Blocks.DARK_OAK_WOOD, LootTables.STRIP_DARK_OAK);
 
+		add(Blocks.MANGROVE_LOG,  LootTables.STRIP_MANGROVE);
+		add(Blocks.MANGROVE_WOOD, LootTables.STRIP_MANGROVE);
+
 		add(Blocks.CRIMSON_STEM,   LootTables.STRIP_CRIMSON);
 		add(Blocks.CRIMSON_HYPHAE, LootTables.STRIP_CRIMSON);
 
