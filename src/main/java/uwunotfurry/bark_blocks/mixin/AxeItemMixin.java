@@ -16,7 +16,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
@@ -44,15 +44,20 @@ public class AxeItemMixin {
 		Block block = state.getBlock();
 
 		if (AxeInteractLootMap.contains(block) && level instanceof ServerLevel) {
-			LootTable lootTable = ((ServerLevel)level).getServer().getLootTables().get(AxeInteractLootMap.get(block));
-			LootContext lootContext = (new LootContext.Builder((ServerLevel)level))
-				.withRandom(level.random)
-				.withParameter(LootContextParams.TOOL, context.getItemInHand())
-				.withParameter(LootContextParams.BLOCK_STATE, state)
-				.withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(pos))
+			LootTable lootTable = ((ServerLevel)level)
+				.getServer()
+				.getLootData()
+				.getLootTable(
+					AxeInteractLootMap.get(block)
+				)
+			;
+			LootParams lootParams = new LootParams.Builder((ServerLevel)level)
+				.withParameter(LootContextParams.TOOL,			context.getItemInHand())
+				.withParameter(LootContextParams.BLOCK_STATE,	state)
+				.withParameter(LootContextParams.ORIGIN,		Vec3.atCenterOf(pos))
 				.create(LootContextParamSets.BLOCK)
 			;
-			for (ItemStack items : lootTable.getRandomItems(lootContext)) {
+			for (ItemStack items : lootTable.getRandomItems(lootParams)) {
 				Block.popResourceFromFace(level, pos, context.getClickedFace(), items);
 			}
 		}

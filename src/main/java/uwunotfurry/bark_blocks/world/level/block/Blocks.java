@@ -62,6 +62,12 @@ public class Blocks {
 			net.minecraft.world.level.block.Blocks.MANGROVE_LOG)
 		)
 	);
+	public static final Block CHERRY_BARK = register(
+		"cherry_bark",
+		new HollowRotatedPillarBlock(Block.Properties.copy(
+			net.minecraft.world.level.block.Blocks.CHERRY_LOG)
+		)
+	);
 	public static final Block CRIMSON_ANNULUS = register(
 		"crimson_annulus",
 		new HollowRotatedPillarBlock(Block.Properties.copy(
@@ -83,6 +89,7 @@ public class Blocks {
 		FlammableBlockRegistry.getDefaultInstance().add(ACACIA_BARK,	30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(DARK_OAK_BARK,	30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_BARK,	30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(CHERRY_BARK,	30, 60);
 
 		FuelRegistry.INSTANCE.add(OAK_BARK,			150);
 		FuelRegistry.INSTANCE.add(SPRUCE_BARK,		150);
@@ -91,6 +98,7 @@ public class Blocks {
 		FuelRegistry.INSTANCE.add(ACACIA_BARK,		150);
 		FuelRegistry.INSTANCE.add(DARK_OAK_BARK,	150);
 		FuelRegistry.INSTANCE.add(MANGROVE_BARK,	150);
+		FuelRegistry.INSTANCE.add(CHERRY_BARK,		150);
 
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> {
 			content.addAfter(Items.OAK_WOOD,		OAK_BARK);
@@ -100,6 +108,7 @@ public class Blocks {
 			content.addAfter(Items.ACACIA_WOOD,		ACACIA_BARK);
 			content.addAfter(Items.DARK_OAK_WOOD,	DARK_OAK_BARK);
 			content.addAfter(Items.MANGROVE_WOOD,	MANGROVE_BARK);
+			content.addAfter(Items.CHERRY_WOOD,		CHERRY_BARK);
 			content.addAfter(Items.CRIMSON_HYPHAE,	CRIMSON_ANNULUS);
 			content.addAfter(Items.WARPED_HYPHAE,	WARPED_ANNULUS);
 		});

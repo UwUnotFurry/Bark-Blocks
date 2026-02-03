@@ -14,6 +14,7 @@ public class LootTables {
 	public static final ResourceLocation STRIP_ACACIA	= register("acacia");
 	public static final ResourceLocation STRIP_DARK_OAK	= register("dark_oak");
 	public static final ResourceLocation STRIP_MANGROVE	= register("mangrove");
+	public static final ResourceLocation STRIP_CHERRY	= register("cherry");
 	public static final ResourceLocation STRIP_CRIMSON	= register("crimson");
 	public static final ResourceLocation STRIP_WARPED	= register("warped");
 
