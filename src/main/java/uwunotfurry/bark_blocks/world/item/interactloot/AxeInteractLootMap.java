@@ -3,21 +3,22 @@ package uwunotfurry.bark_blocks.world.item.interactloot;
 import java.util.Map;
 import java.util.IdentityHashMap;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.LootTable;
 
 import uwunotfurry.bark_blocks.BarkBlocks;
 import uwunotfurry.bark_blocks.world.level.storage.loot.LootTables;
 
 public class AxeInteractLootMap {
 
-	private static final Map<Block, ResourceLocation> Block2LootMap = new IdentityHashMap<>(12);
+	private static final Map<Block, ResourceKey<LootTable>> Block2LootMap = new IdentityHashMap<>(12);
 
-	public static void add(Block block, ResourceLocation loot) {
+	public static void add(Block block, ResourceKey<LootTable> loot) {
 		Block2LootMap.put(block, loot);
 	}
-	public static ResourceLocation get(Block block) {
+	public static ResourceKey<LootTable> get(Block block) {
 		return Block2LootMap.get(block);
 	}
 	public static boolean contains(Block block) {

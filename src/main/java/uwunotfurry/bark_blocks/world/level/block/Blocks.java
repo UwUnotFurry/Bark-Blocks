@@ -22,61 +22,61 @@ public class Blocks {
 
 	public static final Block OAK_BARK = register(
 		"oak_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.OAK_LOG)
 		)
 	);
 	public static final Block SPRUCE_BARK = register(
 		"spruce_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.SPRUCE_LOG)
 		)
 	);
 	public static final Block BIRCH_BARK = register(
 		"birch_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.BIRCH_LOG)
 		)
 	);
 	public static final Block JUNGLE_BARK = register(
 		"jungle_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.JUNGLE_LOG)
 		)
 	);
 	public static final Block ACACIA_BARK = register(
 		"acacia_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.ACACIA_LOG)
 		)
 	);
 	public static final Block DARK_OAK_BARK = register(
 		"dark_oak_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.DARK_OAK_LOG)
 		)
 	);
 	public static final Block MANGROVE_BARK = register(
 		"mangrove_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.MANGROVE_LOG)
 		)
 	);
 	public static final Block CHERRY_BARK = register(
 		"cherry_bark",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.CHERRY_LOG)
 		)
 	);
 	public static final Block CRIMSON_ANNULUS = register(
 		"crimson_annulus",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.CRIMSON_STEM)
 		)
 	);
 	public static final Block WARPED_ANNULUS = register(
 		"warped_annulus",
-		new HollowRotatedPillarBlock(Block.Properties.copy(
+		new HollowRotatedPillarBlock(Block.Properties.ofFullCopy(
 			net.minecraft.world.level.block.Blocks.WARPED_STEM)
 		)
 	);

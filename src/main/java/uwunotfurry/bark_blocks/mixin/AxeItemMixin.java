@@ -46,7 +46,7 @@ public class AxeItemMixin {
 		if (AxeInteractLootMap.contains(block) && level instanceof ServerLevel) {
 			LootTable lootTable = ((ServerLevel)level)
 				.getServer()
-				.getLootData()
+				.reloadableRegistries()
 				.getLootTable(
 					AxeInteractLootMap.get(block)
 				)
