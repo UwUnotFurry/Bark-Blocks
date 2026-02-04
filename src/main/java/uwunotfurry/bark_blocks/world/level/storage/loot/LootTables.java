@@ -22,7 +22,7 @@ public class LootTables {
 	public static final ResourceKey<LootTable> STRIP_WARPED		= register("warped");
 
 	private static ResourceKey<LootTable> register(String name) {
-		ResourceKey<LootTable> key = ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation(BarkBlocks.MOD_ID, "gameplay/strip/" + name));
+		ResourceKey<LootTable> key = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(BarkBlocks.MOD_ID, "gameplay/strip/" + name));
 
 		if (BuiltInLootTables.all().contains(key)) {
 			throw new IllegalArgumentException(key + " is already a registered built-in loot table");

@@ -115,8 +115,8 @@ public class Blocks {
 	}
 
 	private static Block register(String name, Block block) {
-		Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(BarkBlocks.MOD_ID, name), block);
-		Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(BarkBlocks.MOD_ID, name), new BlockItem(block, new Item.Properties()));
+		Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(BarkBlocks.MOD_ID, name), block);
+		Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(BarkBlocks.MOD_ID, name), new BlockItem(block, new Item.Properties()));
 		return block;
 	}
 }
