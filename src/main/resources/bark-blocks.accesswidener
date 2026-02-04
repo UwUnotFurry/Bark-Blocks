@@ -1,1 +1,3 @@
 classTweaker v1 named
+
+extendable method net/minecraft/world/level/levelgen/feature/FallenTreeFeature placeStump (Lnet/minecraft/world/level/levelgen/feature/configurations/FallenTreeConfiguration;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos$MutableBlockPos;)V

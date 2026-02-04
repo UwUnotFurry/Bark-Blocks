@@ -6,13 +6,17 @@
 
 This mod adds bark blocks, a new type of wooden block. When you strip a log with silk touch, you now get a bark block of the corresponding wood type. Bark blocks are hollow through one axis, leaving only a two-pixel-thick ring. As they are hollow, you can stand or crawl inside them and they can also be waterlogged.
 
+### worldgen
+
+In 1.21.5, Mojang added fallen trees to java edition: This mod adds a 1/5 chance to replace fallen trees with a hollow variant - made from bark blocks.
+
 ## Setup
 
 ### Compiling (Optional)
 
 Compiled jar files are available under releases - if you intend to use these then you can ignore this. I suggest using them unless you are familiar with mod development or otherwise understand what you are doing.
 
-Your IDE of choice may be able to be used for this; otherwise, your terminal of choice. Using an IDE requires [setup](https://docs.fabricmc.net/develop/getting-started/setting-up). In any case, run the build task. The output jar should be located as <nobr>'build/libs/bark-blocks-\<version\>.jar'</nobr>.
+Your IDE of choice may be able to be used for this; otherwise, your terminal of choice. Using an IDE requires [setup](https://docs.fabricmc.net/develop/getting-started/setting-up). In any case, run the runDatagen task then the build task. The output jar should be located as <nobr>'build/libs/bark-blocks-\<version\>.jar'</nobr>.
 
 <sub>Note: there may also be a jar file of similar name <nobr>'bark-blocks-\<version\>-sources.jar'</nobr>, which can be ignored.</sub>
 
