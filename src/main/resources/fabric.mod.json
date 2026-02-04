@@ -30,9 +30,9 @@
 	"accessWidener" : "bark-blocks.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.18.2",
-		"minecraft": ">=1.21 <1.21.2",
+		"minecraft": ">=1.21.2 <1.21.4",
 		"java": ">=8",
-		"fabric": "*"
+		"fabric": ">=0.105.0"
 	},
 	"suggests": {
 	}
