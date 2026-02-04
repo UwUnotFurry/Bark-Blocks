@@ -18,6 +18,7 @@ public class LootTables {
 	public static final ResourceKey<LootTable> STRIP_DARK_OAK	= register("dark_oak");
 	public static final ResourceKey<LootTable> STRIP_MANGROVE	= register("mangrove");
 	public static final ResourceKey<LootTable> STRIP_CHERRY		= register("cherry");
+	public static final ResourceKey<LootTable> STRIP_PALE_OAK	= register("pale_oak");
 	public static final ResourceKey<LootTable> STRIP_CRIMSON	= register("crimson");
 	public static final ResourceKey<LootTable> STRIP_WARPED		= register("warped");
 

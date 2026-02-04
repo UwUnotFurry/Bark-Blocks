@@ -1,0 +1,6 @@
+{
+	"model" : {
+		"type" : "minecraft:model",
+		"model" : "bark-blocks:block/spruce_bark"
+	}
+}
